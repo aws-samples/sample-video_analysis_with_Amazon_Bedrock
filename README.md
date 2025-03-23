@@ -1,8 +1,8 @@
 # Video analysis using Amazon Bedrock for road safety
-## Document Purpose
+## Overview
 This project outlines our approaches and experimentation to building a comprehensive road safety analysis system using multi-camera video feeds. Our goal is to provide actionable insights and recommendations to enhance driver safety through advanced video processing and AI techniques.
 
-## Abstract
+
 The Road Safety Video anaylsis will processes multiple camera feeds to analyze driving patterns, identify potential hazards, and generate safety recommendations. By leveraging different LLM in Bedrock, we aim to reduce accidents and improve overall road safety.This can be additionally used to coach and train the fleet drivers. 
 
 
@@ -13,7 +13,6 @@ We are developing an integrated system that utilizes multiple video processing a
 2. Claude-based image grid processing for comprehensive scene understanding
 3. Hybrid summarization using both Nova and Sonnet models
 
-**Note:** At the time of writing this blog, Anthropic Claude models provides support for image(not video), however Nova pro provides support for videos as well. 
 
 
 ## Technical Approach
