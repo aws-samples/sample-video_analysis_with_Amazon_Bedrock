@@ -26,13 +26,15 @@ We are developing an integrated system that utilizes multiple video processing a
 
 ### Video Processing Options
 
-| Experiment # | Details | Comments |
-|--------|----------|-----------|
-| **1A** | Video - individual videos <br>Then summarize with nova | Multiple calls |
-| **1B** | Video - stitched video | 1 call <br>Stitched video is done using python code and might have resolution/quality issue |
-| **1C** | Video - individual videos <br>Then summarize with sonnet | Multiple calls |
-| **2A** | Video - stitched video | 1 call <br>Stitched video is done using python code and might have resolution/quality issue |
-| **2B** | Video image grid - individual grid <br>Then summarize with sonnet | Multiple calls |
+| Experiment # | Details | Comments | Link |
+|--------|----------|-----------|------|
+| **1A** | Video - individual videos <br>Then summarize with nova | Multiple calls | [Notebook 1](experiments/notebook1.ipynb#1A) |
+| **1B** | Video - stitched video | 1 call <br>Stitched video is done using python code and might have resolution/quality issue | [Notebook 1](experiments/notebook1.ipynb#1B) |
+| **1C** | Video - individual videos <br>Then summarize with sonnet | Multiple calls | [Notebook 1](experiments/notebook1.ipynb#1C) |
+| **2A** | Video - stitched video | 1 call <br>Stitched video is done using python code and might have resolution/quality issue | [Notebook 2](experiments/notebook2.ipynb#2A) |
+| **2B** | Video image grid - individual grid <br>Then summarize with sonnet | Multiple calls | [Notebook 2](experiments/notebook2.ipynb#2B) |
+
+    
 
 
 ## Success Metrics
