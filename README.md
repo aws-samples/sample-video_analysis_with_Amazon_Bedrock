@@ -26,6 +26,9 @@ We are developing an integrated system that utilizes multiple video processing a
 
 ### Video Processing Options
 
+For stitching the videos together, you can leverage the following notebook:
+[Combine_video.ipynb](Combine_videos.ipynb)
+
 | Experiment # | Details | Comments | Link |
 |--------|----------|-----------|------|
 | **1A** | Video - individual videos <br>Then summarize with nova | Multiple calls | [Notebook 1](experiments/notebook1.ipynb#1A) |
