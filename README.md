@@ -29,6 +29,8 @@ We are developing an integrated system that utilizes multiple video processing a
 For stitching the videos together, you can leverage the following notebook:
 [Combine_video.ipynb](Combine_videos.ipynb)
 
+
+
 | Experiment # | Details | Comments | Link |
 |--------|----------|-----------|------|
 | **1A** | Video - individual videos <br>Then summarize with nova | Multiple calls | [Notebook 1](experiments/notebook1.ipynb#1A) |
@@ -37,15 +39,21 @@ For stitching the videos together, you can leverage the following notebook:
 | **2A** | Video - stitched video | 1 call <br>Stitched video is done using python code and might have resolution/quality issue | [Notebook 2](experiments/notebook2.ipynb#2A) |
 | **2B** | Video image grid - individual grid <br>Then summarize with sonnet | Multiple calls | [Notebook 2](experiments/notebook2.ipynb#2B) |
 
-    
 
+This experimental setup explores different approaches to video analysis using two main methods: direct video processing and video image grid analysis. The experiments are divided into two notebooks focusing on different methodologies:
 
-## Success Metrics
-- Processing accuracy for different lighting conditions
-- System latency and real-time performance
-- Quality of safety recommendations
-- Scalability with multiple camera feeds
+### Notebook 1: Video Analysis with Nova Pro (Experiments 1A-1C)
+Experiments 1A through 1C investigate different approaches using Nova Pro:
+- **1A** processes individual videos separately and then combines the summaries, allowing for detailed analysis of each video but requiring multiple API calls.
+- **1B** tests a single-call approach using a stitched video, which is more efficient but may face quality trade-offs due to the video combination process.
+- **1C** follows the individual video approach like 1A but uses Sonnet for summarization, providing a comparison between different summarization methods.
 
+### Notebook 2: Video Image Grid Analysis with Claude (Experiments 2A-2B)
+Experiments 2A and 2B explore alternative approaches using image grid analysis:
+- **2A** uses a stitched video similar to 1B but processes it through Claude, offering a different perspective on combined video analysis.
+- **2B** processes individual image grids and uses Sonnet for summarization, potentially providing more detailed analysis while requiring multiple processing steps.
+
+Please note - these are just experiment and you can change the prompt, frames sampling per your usecase. 
 
 ## Contributing
 Refer to [details](CONTRIBUTING.md)
