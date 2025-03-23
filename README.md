@@ -5,12 +5,6 @@ This project outlines our approaches and experimentation to building a comprehen
 ## Abstract
 The Road Safety Video anaylsis will processes multiple camera feeds to analyze driving patterns, identify potential hazards, and generate safety recommendations. By leveraging different LLM in Bedrock, we aim to reduce accidents and improve overall road safety.This can be additionally used to coach and train the fleet drivers. 
 
-## Problem Statement
-Current road safety systems often rely on reactive measures or limited data points. There is a critical need for:
-- Real-time analysis of driving conditions and behaviors
-- Comprehensive multi-angle video processing
-- Actionable safety recommendations for drivers
-- Scalable processing of large video datasets
 
 ## Proposed Solution
 We are developing an integrated system that utilizes multiple video processing approaches to maximize accuracy and efficiency.  We will be leveraging Amazon Bedrock for the experimentation. Our solution incorporates:
