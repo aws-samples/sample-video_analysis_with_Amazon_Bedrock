@@ -64,18 +64,24 @@ The AWS identity you assume from your notebook environment (which is the Studio/
 Open the AWS IAM Console
 Find your Role (if using SageMaker or otherwise assuming an IAM Role), or else User
 Select Add Permissions > Create Inline Policy to attach new inline permissions, open the JSON editor and paste in the below example policy:
+
+Replace <<your-specific-bucket-name>> with your bucket name
+
 ```
 {
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "BedrockFullAccess",
+            "Sid": "BedrockSpecificModelAccess",
             "Effect": "Allow",
-            "Action": ["bedrock:*"],
-            "Resource": "*"
+            "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:ListFoundationModels"
+            ],
+            "Resource": "arn:aws:bedrock:*:*:foundation-model/*"
         },
         {
-            "Sid": "S3Access",
+            "Sid": "S3SpecificBucketAccess",
             "Effect": "Allow",
             "Action": [
                 "s3:GetObject",
@@ -83,10 +89,14 @@ Select Add Permissions > Create Inline Policy to attach new inline permissions, 
                 "s3:ListBucket",
                 "s3:DeleteObject"
             ],
-            "Resource": "*"
+            "Resource": [
+                "arn:aws:s3:::your-specific-bucket-name",
+                "arn:aws:s3:::your-specific-bucket-name/*"
+            ]
         }
     ]
 }
+
 
 ```
 
