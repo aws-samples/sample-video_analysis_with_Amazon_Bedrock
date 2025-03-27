@@ -64,6 +64,7 @@ The AWS identity you assume from your notebook environment (which is the Studio/
 Open the AWS IAM Console
 Find your Role (if using SageMaker or otherwise assuming an IAM Role), or else User
 Select Add Permissions > Create Inline Policy to attach new inline permissions, open the JSON editor and paste in the below example policy:
+```
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -86,6 +87,9 @@ Select Add Permissions > Create Inline Policy to attach new inline permissions, 
         }
     ]
 }
+
+```
+
 ⚠️ Note: With Amazon SageMaker, your notebook execution role will typically be separate from the user or role that you log in to the AWS Console with. If you'd like to explore the AWS Console for Amazon Bedrock, you'll need to grant permissions to your Console user/role too. You can run the notebooks anywhere as long as you have access to the AWS Bedrock service and have appropriate credentials
 
 For more information on the fine-grained action and resource permissions in Bedrock, check out the Bedrock Developer Guide.
