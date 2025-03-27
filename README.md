@@ -104,6 +104,7 @@ Replace <<your-specific-bucket-name>> with your bucket name
 
 For more information on the fine-grained action and resource permissions in Bedrock, check out the Bedrock Developer Guide.
 
+Once your notebook environment is set up, navigate to respective notebook in  repository and run it.
 
 
 ## Contributing
