@@ -48,6 +48,50 @@ Experiments 2A and 2B explore alternative approaches using image grid analysis:
 
 Please note - these are just experiment and you can change the prompt, frames sampling per your usecase. 
 
+# Getting Started
+Choose a notebook environment
+This project is presented as a series of Python notebooks, which you can run from the environment of your choice:
+
+* For a fully-managed environment with rich AI/ML features, we'd recommend using SageMaker Studio. To get started quickly, you can refer to the instructions for domain quick setup.
+* For a fully-managed but more basic experience, you could instead create a SageMaker Notebook Instance.
+* If you prefer to use your existing (local or other) notebook environment, make sure it has credentials for calling AWS.
+
+* Enable AWS IAM permissions for Bedrock
+The AWS identity you assume from your notebook environment (which is the Studio/notebook Execution Role from SageMaker, or could be a role or IAM User for self-managed notebooks), must have sufficient AWS IAM permissions to call the Amazon Bedrock service.
+
+* To grant Bedrock access to your identity, you can:
+
+Open the AWS IAM Console
+Find your Role (if using SageMaker or otherwise assuming an IAM Role), or else User
+Select Add Permissions > Create Inline Policy to attach new inline permissions, open the JSON editor and paste in the below example policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "BedrockFullAccess",
+            "Effect": "Allow",
+            "Action": ["bedrock:*"],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3Access",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+⚠️ Note: With Amazon SageMaker, your notebook execution role will typically be separate from the user or role that you log in to the AWS Console with. If you'd like to explore the AWS Console for Amazon Bedrock, you'll need to grant permissions to your Console user/role too. You can run the notebooks anywhere as long as you have access to the AWS Bedrock service and have appropriate credentials
+
+For more information on the fine-grained action and resource permissions in Bedrock, check out the Bedrock Developer Guide.
+
+
+
 ## Contributing
 Refer to [details](CONTRIBUTING.md)
 
